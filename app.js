@@ -1,14 +1,14 @@
 // =======================
 // get the packages we need ============
 // =======================
-const  express     = require('express');
-const  app         = express();
-const  bodyParser  = require('body-parser');
-const  morgan      = require('morgan');
-const  mongoose    = require('mongoose');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
 
-const  jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-const  config = require('./config'); // get our config file
+const jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
+const config = require('./config'); // get our config file
 const router = require('./services/auth/index')
 
 // =======================
@@ -29,8 +29,8 @@ app.use(morgan('dev'));
 // routes ================
 // =======================
 // basic route
-app.get('/', function(req, res) {
-    res.send('Hello! The API is at http://localhost:' + port + '/api');
+app.get('/', function (req, res) {
+	res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
 
 // apply the routes to our application with the prefix /api
